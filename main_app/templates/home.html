@@ -17,11 +17,15 @@
             <th>Delete</th>
         </thead>
         <tbody>
+          {% for widget in widget_list %}
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>{{ widget.description }}</td>
+                <td>{{ widget.quantity }}</td>
+                <td>
+                    <a href="{% url 'delete' widget.id %}" style="color: red">X</a>
+                </td>
             </tr>
+          {% endfor %}
         </tbody>
     </table>
     <hr>
