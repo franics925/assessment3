@@ -4,5 +4,5 @@ from django.shortcuts import render, redirect
 
 urlpatterns = [
   path('', views.home, name='home'),
-#   path('widget/<int:widget_id>/', views.delete, name='delete')
+  path('widget/<int:widget_id>/', views.delete, name='delete')
 ]
